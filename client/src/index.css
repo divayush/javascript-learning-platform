@@ -1,0 +1,231 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primitive Color Tokens */
+  --color-white: hsl(0, 0%, 100%);
+  --color-black: hsl(0, 0%, 0%);
+  --color-cream-50: hsl(60, 9%, 98%);
+  --color-cream-100: hsl(54, 100%, 99%);
+  --color-gray-200: hsl(0, 0%, 96%);
+  --color-gray-300: hsl(240, 1%, 68%);
+  --color-gray-400: hsl(219, 2%, 52%);
+  --color-slate-500: hsl(201, 6%, 56%);
+  --color-brown-600: hsl(33, 19%, 31%);
+  --color-charcoal-700: hsl(120, 2%, 13%);
+  --color-charcoal-800: hsl(120, 2%, 16%);
+  --color-slate-900: hsl(197, 49%, 15%);
+  --color-teal-300: hsl(186, 60%, 49%);
+  --color-teal-400: hsl(185, 60%, 44%);
+  --color-teal-500: hsl(188, 62%, 34%);
+  --color-teal-600: hsl(187, 63%, 31%);
+  --color-teal-700: hsl(187, 63%, 28%);
+  --color-teal-800: hsl(186, 59%, 40%);
+  --color-red-400: hsl(358, 100%, 67%);
+  --color-red-500: hsl(346, 80%, 42%);
+  --color-orange-400: hsl(18, 67%, 64%);
+  --color-orange-500: hsl(20, 56%, 42%);
+
+  /* Background color tokens (Light Mode) */
+  --color-bg-1: hsl(214, 95%, 93%);
+  --color-bg-2: hsl(43, 96%, 89%);
+  --color-bg-3: hsl(142, 76%, 73%);
+  --color-bg-4: hsl(0, 93%, 94%);
+  --color-bg-5: hsl(271, 91%, 94%);
+  --color-bg-6: hsl(25, 95%, 90%);
+  --color-bg-7: hsl(330, 81%, 94%);
+  --color-bg-8: hsl(187, 85%, 86%);
+
+  /* Semantic Color Tokens */
+  --background: var(--color-cream-50);
+  --foreground: var(--color-slate-900);
+  --muted: hsl(60, 5%, 96%);
+  --muted-foreground: hsl(25, 5%, 45%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: var(--color-slate-900);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: var(--color-slate-900);
+  --border: hsl(20, 6%, 90%);
+  --input: hsl(20, 6%, 90%);
+  --primary: var(--color-teal-500);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(60, 5%, 96%);
+  --secondary-foreground: hsl(24, 10%, 10%);
+  --accent: hsl(60, 5%, 96%);
+  --accent-foreground: hsl(24, 10%, 10%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(60, 9%, 98%);
+  --ring: var(--color-teal-500);
+  --radius: 0.5rem;
+
+  /* Custom colors to match design */
+  --teal-50: hsl(186, 100%, 94%);
+  --teal-100: hsl(186, 85%, 86%);
+  --teal-300: var(--color-teal-300);
+  --teal-400: var(--color-teal-400);
+  --teal-500: var(--color-teal-500);
+  --teal-600: var(--color-teal-600);
+  --teal-700: var(--color-teal-700);
+  --teal-800: var(--color-teal-800);
+  
+  --cream-50: var(--color-cream-50);
+  --cream-100: var(--color-cream-100);
+  
+  --charcoal-700: var(--color-charcoal-700);
+  --charcoal-800: var(--color-charcoal-800);
+  
+  --slate-500: var(--color-slate-500);
+  --slate-900: var(--color-slate-900);
+  
+  --gray-200: var(--color-gray-200);
+  --gray-300: var(--color-gray-300);
+  --gray-400: var(--color-gray-400);
+}
+
+.dark {
+  --background: hsl(240, 10%, 4%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 4%, 16%);
+  --muted-foreground: hsl(240, 5%, 65%);
+  --popover: hsl(240, 10%, 4%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 4%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 4%, 16%);
+  --input: hsl(240, 4%, 16%);
+  --primary: var(--color-teal-300);
+  --primary-foreground: var(--color-slate-900);
+  --secondary: hsl(240, 4%, 16%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 4%, 16%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 63%, 31%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: var(--color-teal-300);
+
+  /* Background color tokens (Dark Mode) */
+  --color-bg-1: hsl(229, 78%, 15%);
+  --color-bg-2: hsl(35, 91%, 15%);
+  --color-bg-3: hsl(142, 64%, 15%);
+  --color-bg-4: hsl(0, 84%, 15%);
+  --color-bg-5: hsl(271, 70%, 15%);
+  --color-bg-6: hsl(25, 91%, 15%);
+  --color-bg-7: hsl(330, 81%, 15%);
+  --color-bg-8: hsl(187, 85%, 15%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased;
+    background-color: var(--background);
+    color: var(--foreground);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Custom component styles matching the design */
+  .bg-cream-50 {
+    background-color: var(--cream-50);
+  }
+  
+  .bg-cream-100 {
+    background-color: var(--cream-100);
+  }
+  
+  .bg-teal-50 {
+    background-color: var(--teal-50);
+  }
+  
+  .bg-teal-100 {
+    background-color: var(--teal-100);
+  }
+  
+  .bg-teal-600 {
+    background-color: var(--teal-600);
+  }
+  
+  .hover\:bg-teal-700:hover {
+    background-color: var(--teal-700);
+  }
+  
+  .text-teal-600 {
+    color: var(--teal-600);
+  }
+  
+  .text-slate-900 {
+    color: var(--slate-900);
+  }
+  
+  .text-slate-600 {
+    color: var(--slate-500);
+  }
+  
+  .text-slate-500 {
+    color: var(--slate-500);
+  }
+  
+  .text-slate-700 {
+    color: var(--slate-900);
+  }
+  
+  .bg-charcoal-800 {
+    background-color: var(--charcoal-800);
+  }
+  
+  .text-green-400 {
+    color: hsl(142, 71%, 45%);
+  }
+  
+  .text-red-400 {
+    color: var(--color-red-400);
+  }
+  
+  .border-teal-600 {
+    border-color: var(--teal-600);
+  }
+  
+  .hover\:bg-teal-50:hover {
+    background-color: var(--teal-50);
+  }
+  
+  .text-gray-200 {
+    color: var(--gray-200);
+  }
+  
+  .border-gray-200 {
+    border-color: var(--gray-200);
+  }
+  
+  .text-gray-300 {
+    color: var(--gray-300);
+  }
+  
+  .border-gray-300 {
+    border-color: var(--gray-300);
+  }
+  
+  .text-gray-400 {
+    color: var(--gray-400);
+  }
+  
+  .hover\:text-teal-600:hover {
+    color: var(--teal-600);
+  }
+}
+
+@layer utilities {
+  .transition-colors {
+    transition-property: color, background-color, border-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+}

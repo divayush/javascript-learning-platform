@@ -43,7 +43,7 @@ A modern, interactive web platform designed to teach coding fundamentals to abso
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone <https://github.com/divayush/javascript-learning-platform/tree/main>
   
 2. **Install dependencies**
    ```bash
